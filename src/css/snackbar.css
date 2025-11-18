@@ -1,0 +1,64 @@
+.form{
+
+}
+.delay-label{
+font-family: "Montserrat", sans-serif;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 360px;
+height: 72px;
+gap: 8px;
+margin-bottom: 14px;
+}
+.delay-input{
+box-sizing: border-box;
+width: 360px;
+height: 40px;
+border: 1px solid #808080;
+border-radius: 4px;
+}
+.field-snack {
+font-family: "Montserrat", sans-serif;
+box-sizing: border-box;
+display: flex;
+width: 360px;
+height: 78px;
+gap: 48px;
+justify-content: center;
+}
+
+.field:hover {
+
+}
+.legend {
+text-align: left;
+padding: 0 8px;
+}
+.field-label {
+display: flex;
+gap: 8px;
+align-items: center;
+}
+.field-input {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 1px solid #757575;
+border-radius: 14px;
+transition: border 250ms ease-in-out;
+}
+
+.field-input:hover {
+border: 1px solid #000;
+}
+
+.field-input:checked {
+border-color:#4e75ff;
+}
+
+.field-input:checked::before {
+background-color: #4e75ff;
+}
