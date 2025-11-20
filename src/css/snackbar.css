@@ -1,5 +1,7 @@
 .form{
-
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .delay-label{
 font-family: "Montserrat", sans-serif;
@@ -13,13 +15,23 @@ gap: 8px;
 margin-bottom: 14px;
 }
 .delay-input{
+padding: 8px 16px;
 box-sizing: border-box;
 width: 360px;
 height: 40px;
 border: 1px solid #808080;
 border-radius: 4px;
+outline: none;
+transition: border 250ms ease-in-out;
+}
+.delay-input:hover{
+border: 1px solid #2E2F42;
+}
+.delay-input:focus{
+border: 1px solid #4e75ff;
 }
 .field-snack {
+padding: 24px 48px 8px 48px;
 font-family: "Montserrat", sans-serif;
 box-sizing: border-box;
 display: flex;
@@ -27,10 +39,15 @@ width: 360px;
 height: 78px;
 gap: 48px;
 justify-content: center;
+margin-bottom: 24px;
+border: 1px solid #808080;
+border-radius: 4px;
+transition: border 250ms ease-in-out;
 }
 
-.field:hover {
-
+.field-snack:hover,
+.field-snack:focus {
+border: 1px solid #000;
 }
 .legend {
 text-align: left;
@@ -49,6 +66,8 @@ height: 20px;
 border: 1px solid #757575;
 border-radius: 14px;
 transition: border 250ms ease-in-out;
+position: relative;
+margin: 0;
 }
 
 .field-input:hover {
@@ -60,5 +79,25 @@ border-color:#4e75ff;
 }
 
 .field-input:checked::before {
+position: absolute;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+top: 3px;
+left: 3px;
+content: "";
 background-color: #4e75ff;
+}
+.submit-btn{
+    width: 360px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4e75ff;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 250ms ease-in-out;
+}
+.submit-btn:hover{
+background-color: #6c8cff;
 }
