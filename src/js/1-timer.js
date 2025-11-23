@@ -35,7 +35,6 @@ const options = {
     } else {
       userSelectedDate = pickedDate;
       startBtn.disabled = false;
-      console.log("Valid date chosen:", userSelectedDate);
     }
   },
 };
@@ -64,6 +63,7 @@ startBtn.addEventListener("click", () => {
   if (!userSelectedDate) return;
 
   startBtn.disabled = true;
+  dateTimeInput.disabled = true;
   timerId = setInterval(() => {
     const now = new Date();
     const diff = userSelectedDate - now;
@@ -75,6 +75,8 @@ startBtn.addEventListener("click", () => {
         message: "Time is up!",
         timeout: 3000,
       });
+      dateTimeInput.disabled = false;
+      startBtn.disabled = true;
       return;
     }
     const time = convertMs(diff);
